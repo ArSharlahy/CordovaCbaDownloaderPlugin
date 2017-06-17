@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cba-downloader-plugin"
+        version="1.0.0">
+    <name>CBA Downloader Plugin</name>
+    <description></description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo>https://github.com/ArSharlahy/CordovaCbaDownloaderPlugin.git</repo>
+    <issue>https://github.com/ArSharlahy/CordovaCbaDownloaderPlugin/issues</issue>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CbaDownloaderPlugin">
+                <param name="android-package" value="dai.gurren.dan.CbaDownloaderPlugin"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        </config-file>
+
+        <source-file src="src/android/CbaDownloaderPlugin.java" target-dir="src/dai/gurren/dan"/>
+        <source-file src="src/android/utils/FileLoader.java" target-dir="src/dai/gurren/dan/utils/"/>
+
+
+        <js-module src="www/plugin.js" name="plugin">
+            <runs/>
+
+            <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
+            <clobbers target="CbaDownloaderPlugin"/>
+        </js-module>
+
+
+    </platform>
+</plugin>
