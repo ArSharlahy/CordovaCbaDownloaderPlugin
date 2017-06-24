@@ -1,5 +1,3 @@
-/**
- */
 package dai.gurren.dan;
 
 import org.apache.cordova.CallbackContext;
@@ -24,12 +22,10 @@ public class CbaDownloaderPlugin extends CordovaPlugin {
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
         Log.d(TAG, "Initializing CbaDownloaderPlugin");
-
-        Log.d(TAG, Environment.DIRECTORY_DOWNLOADS);
     }
 
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
-        if (action.equals("echo")) {
+        /*if (action.equals("echo")) {
             String phrase = args.getString(0);
             // Echo back the first argument
             Log.d(TAG, phrase);
@@ -37,6 +33,9 @@ public class CbaDownloaderPlugin extends CordovaPlugin {
             // An example of returning data back to the web layer
             final PluginResult result = new PluginResult(PluginResult.Status.OK, (new Date()).toString());
             callbackContext.sendPluginResult(result);
+        } else */
+        if (action.equals("startDownload")) {
+            Log.d(TAG, args.toString());
         }
         return true;
     }

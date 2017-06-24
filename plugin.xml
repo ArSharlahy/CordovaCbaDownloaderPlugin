@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="cba-downloader-plugin"
+        id="cba-downloader"
         version="1.0.0">
     <name>CBA Downloader Plugin</name>
     <description></description>
@@ -24,14 +24,13 @@
         </config-file>
 
         <source-file src="src/android/CbaDownloaderPlugin.java" target-dir="src/dai/gurren/dan"/>
-        <source-file src="src/android/utils/FileLoader.java" target-dir="src/dai/gurren/dan/utils/"/>
 
 
-        <js-module src="www/plugin.js" name="plugin">
+        <js-module src="www/cbaDownloader.js" name="plugin">
             <runs/>
 
             <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
-            <clobbers target="CbaDownloaderPlugin"/>
+            <clobbers target="CbaDownloader"/>
         </js-module>
 
 

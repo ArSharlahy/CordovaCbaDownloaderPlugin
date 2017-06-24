@@ -1,11 +1,11 @@
 {
-  "name": "cba-downloader-plugin",
+  "name": "cba-downloader",
   "version": "1.0.0",
   "cordova": {
-    "id": "cba-downloader-plugin",
+    "id": "cba-downloader",
     "platforms": [
       "android"
     ]
   },
-  "description": "A starting point for a Cordova Plugin"
+  "description": "CbaDownloaderPlugin"
 }
